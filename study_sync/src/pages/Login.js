@@ -42,7 +42,7 @@ const Login = () => {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-        <Button type="submit" variant="contained" color="primary">
+        <Button onClick={{}} type="submit" variant="contained" color="primary">
           Sign Up / Log In
         </Button>
       </Box>

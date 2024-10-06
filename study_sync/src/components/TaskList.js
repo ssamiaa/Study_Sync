@@ -11,7 +11,7 @@ const TaskList = () => {
     // Fetch tasks from API
     const fetchTasks = async () => {
       try {
-        const response = await axios.get('/api/tasks'); // Update with your actual API endpoint
+        const response = await axios.get('/api/tasks'); 
         setTasks(response.data);
       } catch (error) {
         console.error('Error fetching tasks:', error);
@@ -26,12 +26,12 @@ const TaskList = () => {
       task.id === taskId ? { ...task, completed: !task.completed } : task
     );
     setTasks(updatedTasks);
-    // Here you would also make an API call to update the task in the backend
+    
   };
 
   const handleDelete = async (taskId) => {
     try {
-      await axios.delete(`/api/tasks/${taskId}`); // Update with your actual API endpoint
+      await axios.delete(`/api/tasks/${taskId}`); 
       setTasks(tasks.filter((task) => task.id !== taskId));
     } catch (error) {
       console.error('Error deleting task:', error);

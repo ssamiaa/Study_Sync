@@ -10,6 +10,10 @@ const Dashboard = () => {
   const navigate = useNavigate();
   const { currentUser, logout } = useContext(AuthContext);
 
+  const handleCreateTask = () => {
+    navigate('/tasks/new');
+  };
+
   return (
     <Container style={{ marginTop: '50px' }}>
       <Typography variant="h4" gutterBottom>
@@ -25,10 +29,10 @@ const Dashboard = () => {
           <Button
             variant="contained"
             color="primary"
-            onClick={() => navigate('/tasks/new')}
+            onClick={handleCreateTask}
             style={{ marginTop: '10px' }}
           >
-            Add New Task
+            Create Task
           </Button>
         </Grid>
         <Grid item xs={12} md={6}>
@@ -41,3 +45,4 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
